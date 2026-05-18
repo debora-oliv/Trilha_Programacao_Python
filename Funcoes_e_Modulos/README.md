@@ -11,7 +11,7 @@ A arquitetura do script foi dividida em funções de responsabilidade única par
 
 **`escanear_vazamentos(texto: str, tipo_dado: str) -> list[str]`**: Recebe o texto bruto, aplica expressões regulares (Regex) específicas com base no tipo de dado solicitado e retorna uma lista contendo todas as ocorrências encontradas no texto ou, caso nada tenha sido encontrado, retorna uma lista vazia.
 
-**`renderizar_dashboard()`**: Concentra toda a lógica da interface web, criando os campos de entrada, botões de ação e exibindo os resultados obtidos da varredura.
+**`renderizar_dashboard()`**: Concentra toda a lógica da interface web, criando os campos de entrada, botões de ação e exibindo tabelas e métricas com os dados processados pelas funções anteriores.
 
 # Pacotes e Bibliotecas
 **`requests`**: Pacote usado para buscar o texto bruto diretamente da URL via requisições HTTP.
@@ -28,7 +28,10 @@ pip install -r requirements.txt
 
 **2. Iniciar a aplicação web no terminal:**
 ```
-streamlit run main.py
+streamlit run script.py
 ```
 
-**3. Cole essa URL no campo de texto do dashboard no Streamlit: **`https://gist.githubusercontent.com/debora-oliv/d6d7cae4455f1018a519d5e69d01ce1d/raw/da188b87e750fd465b8e17e96c26889918aecb16/fake_data.txt`**
+**3. Use a seguinte URL no campo de texto da aplicação**:
+```
+https://gist.githubusercontent.com/debora-oliv/d6d7cae4455f1018a519d5e69d01ce1d/raw/da188b87e750fd465b8e17e96c26889918aecb16/fake_data.txt
+```
